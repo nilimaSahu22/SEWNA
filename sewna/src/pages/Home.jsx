@@ -22,10 +22,19 @@ function Home() {
       {/* Header */}
       <header className="relative z-10 flex justify-between items-center p-6 md:p-8">
         <h1 
-          className="font-serif text-2xl md:text-3xl font-normal uppercase tracking-wide"
-          style={{ color: '#00B67F' }}
+          className="text-2xl md:text-3xl"
+          style={{ 
+            color: '#00B67F', 
+            fontFamily: 'Pacifico, cursive', 
+            fontWeight: 100,
+            letterSpacing: '-0.02em'
+          }}
         >
-          SEWNA
+          se<span className="text-2xl md:text-3xl"
+          style={{ fontSize: '1.7rem', fontFamily: 'Poppins, sans-serif', fontStyle: 'italic', letterSpacing: '0em' }}
+          >WN</span><span className="text-2xl md:text-3xl"
+          style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 410, letterSpacing: '-0.02em', fontSize: '2.2rem' }}
+          >a.</span>
         </h1>
         <Link 
           to="/login" 

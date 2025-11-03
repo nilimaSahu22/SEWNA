@@ -170,10 +170,15 @@ function NeedDesigner() {
       >
         <Link to="/wel">
           <h1 
-            className="text-2xl md:text-3xl font-normal uppercase tracking-wide"
-            style={{ color: '#00B67F', fontFamily: 'Playfair Display, serif' }}
+            className="text-2xl md:text-3xl"
+            style={{ 
+              color: '#00B67F', 
+              fontFamily: 'Pacifico, cursive', 
+              fontWeight: 100,
+              letterSpacing: '-0.02em'
+            }}
           >
-            SEWNA
+            sewna.
           </h1>
         </Link>
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
