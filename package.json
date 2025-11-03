@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "cd sewna && npm run dev"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}
