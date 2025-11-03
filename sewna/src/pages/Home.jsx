@@ -5,6 +5,9 @@ import image_three from '../assets/images/image_three.jpeg'
 import image_four from '../assets/images/image_four.jpeg'
 import image_five from '../assets/images/image_five.jpeg'
 import image_six from '../assets/images/image_six.jpeg'
+import image_seven from '../assets/images/image_seven.jpeg'
+import image_eight from '../assets/images/image-eight.jpeg'
+import image_nine from '../assets/images/image_nine.jpeg'
 
 function Home() {
   return (
@@ -56,84 +59,229 @@ function Home() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
             <Link
-              to="/need-designer"
-              className="px-8 py-4 font-sans text-base md:text-lg rounded-lg transition-all text-center hover:opacity-90"
+              to="/am-designer"
+              className="px-2 py-2 font-sans text-base md:text-lg rounded-full transition-all hover:opacity-90 flex items-center justify-between gap-4"
               style={{
-                backgroundColor: '#00B67F',
-                color: '#F5F3ED'
+                backgroundColor: '#03A776',
+                color: '#D6C6A8',
+                boxShadow: '0 0 20px rgba(3, 167, 118, 0.3)'
               }}
             >
-              I need a Designer
+              <span>I am a Designer</span>
+              <div 
+                className=""
+                style={{
+                  backgroundColor: 'rgba(214, 198, 168, 0.2)',
+                  border: '1px solid rgba(214, 198, 168, 0.3)'
+                }}
+              />
             </Link>
             <Link
-              to="/am-designer"
-              className="px-8 py-4 font-sans text-base md:text-lg rounded-lg transition-all text-center hover:opacity-90"
+              to="/need-designer"
+              className="px-2 py-2 font-sans text-base md:text-lg rounded-full transition-all hover:opacity-90 flex items-center justify-between gap-4"
               style={{
-                backgroundColor: '#00B67F',
-                color: '#F5F3ED'
+                backgroundColor: '#03A776',
+                color: '#D6C6A8',
+                boxShadow: '0 0 20px rgba(3, 167, 118, 0.3)'
               }}
             >
-              I am a Designer
+              <span>I need a Designer</span>
+              <div 
+                className=""
+                style={{
+                  backgroundColor: 'rgba(214, 198, 168, 0.2)',
+                  border: '1px solid rgba(214, 198, 168, 0.3)'
+                }}
+              />
             </Link>
           </div>
         </div>
 
-        {/* Right Column - Image Grid */}
-        <div className="flex-1 relative lg:min-h-[calc(100vh-120px)] flex items-start justify-end p-6 md:p-8 lg:p-10">
-          {/* Image Grid Container - Positioned in top-right corner */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 lg:gap-4">
-            {/* Image 1 */}
-            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
-              <img 
-                src={image_one} 
-                alt="Fashion design 1" 
-                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
-              />
-            </div>
+        {/* Right Column - Scrapbook Photo Cluster */}
+        <div className="flex-1 relative lg:min-h-[calc(100vh-120px)] p-4 md:p-6 lg:p-8 xl:p-10">
+          {/* Scrapbook Container - Positioned in right corner */}
+          <div className="relative w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
             
-            {/* Image 2 */}
-            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+            {/* Photo 1 - Top left with border and rotation */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(70px, 10vw, 130px)',
+                height: 'clamp(90px, 13vw, 170px)',
+                top: '5%',
+                right: 'clamp(60%, 65%, 70%)',
+                transform: 'rotate(-2deg)',
+              }}
+            >
+              <div className="relative w-full h-full scrapbook-border" style={{
+                padding: '3px',
+              }}>
+                <img 
+                  src={image_one} 
+                  alt="Fashion design 1" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Photo 2 - Top center with slight rotation */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(75px, 11vw, 140px)',
+                height: 'clamp(95px, 14vw, 180px)',
+                top: '8%',
+                right: 'clamp(35%, 40%, 45%)',
+                transform: 'rotate(1.5deg)',
+              }}
+            >
               <img 
                 src={image_two} 
                 alt="Fashion design 2" 
-                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
-            
-            {/* Image 3 */}
-            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
-              <img 
-                src={image_three} 
-                alt="Fashion design 3" 
-                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
-              />
+
+            {/* Photo 3 - Top right with border */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(80px, 12vw, 150px)',
+                height: 'clamp(100px, 15vw, 190px)',
+                top: '3%',
+                right: 'clamp(10%, 15%, 20%)',
+                transform: 'rotate(-1deg)',
+              }}
+            >
+              <div className="relative w-full h-full scrapbook-border" style={{
+                padding: '3px',
+              }}>
+                <img 
+                  src={image_three} 
+                  alt="Fashion design 3" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            
-            {/* Image 4 */}
-            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+
+            {/* Photo 4 - Middle left with rotation */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(65px, 9vw, 120px)',
+                height: 'clamp(85px, 12vw, 160px)',
+                top: '35%',
+                right: 'clamp(70%, 75%, 80%)',
+                transform: 'rotate(2.5deg)',
+              }}
+            >
               <img 
                 src={image_four} 
                 alt="Fashion design 4" 
-                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
-            
-            {/* Image 5 */}
-            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
-              <img 
-                src={image_five} 
-                alt="Fashion design 5" 
-                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
-              />
+
+            {/* Photo 5 - Center with border */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(85px, 13vw, 160px)',
+                height: 'clamp(105px, 16vw, 200px)',
+                top: '32%',
+                right: 'clamp(38%, 43%, 48%)',
+                transform: 'rotate(-1.5deg)',
+              }}
+            >
+              <div className="relative w-full h-full scrapbook-border" style={{
+                padding: '3px',
+              }}>
+                <img 
+                  src={image_five} 
+                  alt="Fashion design 5" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            
-            {/* Image 6 */}
-            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+
+            {/* Photo 6 - Middle right with rotation */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(70px, 10vw, 135px)',
+                height: 'clamp(90px, 13vw, 175px)',
+                top: '38%',
+                right: 'clamp(22%, 27%, 32%)',
+                transform: 'rotate(1deg)',
+              }}
+            >
               <img 
                 src={image_six} 
                 alt="Fashion design 6" 
-                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
+                className="w-full h-full object-cover"
               />
+            </div>
+
+            {/* Photo 7 - Bottom left with border */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(75px, 11vw, 145px)',
+                height: 'clamp(95px, 14vw, 185px)',
+                top: '62%',
+                right: 'clamp(62%, 67%, 72%)',
+                transform: 'rotate(-2deg)',
+              }}
+            >
+              <div className="relative w-full h-full scrapbook-border" style={{
+                padding: '3px',
+              }}>
+                <img 
+                  src={image_seven} 
+                  alt="Fashion design 7" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Photo 8 - Bottom center */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(80px, 12vw, 155px)',
+                height: 'clamp(100px, 15vw, 195px)',
+                top: '65%',
+                right: 'clamp(42%, 47%, 52%)',
+                transform: 'rotate(1.5deg)',
+              }}
+            >
+              <img 
+                src={image_eight} 
+                alt="Fashion design 8" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Photo 9 - Bottom right with border */}
+            <div 
+              className="absolute overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-20"
+              style={{
+                width: 'clamp(78px, 11.5vw, 148px)',
+                height: 'clamp(98px, 14.5vw, 188px)',
+                top: '60%',
+                right: 'clamp(18%, 23%, 28%)',
+                transform: 'rotate(-1.2deg)',
+              }}
+            >
+              <div className="relative w-full h-full scrapbook-border" style={{
+                padding: '3px',
+              }}>
+                <img 
+                  src={image_nine} 
+                  alt="Fashion design 9" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
           
