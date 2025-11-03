@@ -1,4 +1,10 @@
 import { Link } from 'react-router-dom'
+import image_one from '../assets/images/image_one.jpeg'
+import image_two from '../assets/images/image_two.jpeg'
+import image_three from '../assets/images/image_three.jpeg'
+import image_four from '../assets/images/image_four.jpeg'
+import image_five from '../assets/images/image_five.jpeg'
+import image_six from '../assets/images/image_six.jpeg'
 
 function Home() {
   return (
@@ -72,39 +78,72 @@ function Home() {
           </div>
         </div>
 
-        {/* Right Column - Image */}
-        <div className="flex-1 relative lg:min-h-[calc(100vh-120px)]">
-          {/* Image Container with Green Lighting Effect */}
-          <div className="w-full h-[400px] lg:h-full relative overflow-hidden">
-            {/* Placeholder Background - Replace with actual image */}
-            <div 
-              className="w-full h-full relative"
-              style={{
-                background: 'linear-gradient(to bottom right, rgba(0, 125, 90, 0.3) 0%, rgba(0, 90, 66, 0.2) 50%, #000000 100%)'
-              }}
-            >
-              {/* Simulated green lighting effect from right */}
-              <div 
-                className="absolute inset-0" 
-                style={{
-                  background: 'radial-gradient(circle at 80% 50%, rgba(0, 182, 127, 0.4) 0%, rgba(0, 125, 90, 0.2) 30%, transparent 60%)'
-                }}
+        {/* Right Column - Image Grid */}
+        <div className="flex-1 relative lg:min-h-[calc(100vh-120px)] flex items-start justify-end p-6 md:p-8 lg:p-10">
+          {/* Image Grid Container - Positioned in top-right corner */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 lg:gap-4">
+            {/* Image 1 */}
+            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+              <img 
+                src={image_one} 
+                alt="Fashion design 1" 
+                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
               />
-              {/* Additional green glow effect */}
-              <div 
-                className="absolute inset-0"
-                style={{
-                  background: 'linear-gradient(to left, transparent 0%, rgba(0, 182, 127, 0.3) 50%, transparent 100%)'
-                }}
+            </div>
+            
+            {/* Image 2 */}
+            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+              <img 
+                src={image_two} 
+                alt="Fashion design 2" 
+                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
               />
-              {/* Placeholder text - Remove when image is added */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-amber-400/40 text-xs md:text-sm text-center px-4">
-                  Add portrait image: woman-portrait.jpg to /src/assets/
-                </p>
-              </div>
+            </div>
+            
+            {/* Image 3 */}
+            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+              <img 
+                src={image_three} 
+                alt="Fashion design 3" 
+                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
+              />
+            </div>
+            
+            {/* Image 4 */}
+            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+              <img 
+                src={image_four} 
+                alt="Fashion design 4" 
+                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
+              />
+            </div>
+            
+            {/* Image 5 */}
+            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+              <img 
+                src={image_five} 
+                alt="Fashion design 5" 
+                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
+              />
+            </div>
+            
+            {/* Image 6 */}
+            <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10">
+              <img 
+                src={image_six} 
+                alt="Fashion design 6" 
+                className="w-[120px] h-[150px] md:w-[150px] md:h-[180px] lg:w-[180px] lg:h-[220px] object-cover"
+              />
             </div>
           </div>
+          
+          {/* Green lighting effect overlay */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'radial-gradient(circle at 80% 20%, rgba(0, 182, 127, 0.15) 0%, rgba(0, 125, 90, 0.1) 40%, transparent 70%)'
+            }}
+          />
         </div>
       </main>
     </div>
