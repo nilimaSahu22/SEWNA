@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "cd sewna && npm run dev"
+    "dev": "cd sewna && npm run dev",
+    "build": "cd sewna && npm run build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
