@@ -103,6 +103,42 @@ function NeedDesigner() {
     setIsVisible(true)
   }, [])
 
+  useEffect(() => {
+    // Create and inject style element to hide scrollbar
+    const styleId = 'needdesigner-hide-scrollbar'
+    let styleElement = document.getElementById(styleId)
+    
+    if (!styleElement) {
+      styleElement = document.createElement('style')
+      styleElement.id = styleId
+      styleElement.textContent = `
+        html {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
+        html::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+        body {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
+        body::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+      `
+      document.head.appendChild(styleElement)
+    }
+
+    // Cleanup function to remove the style element when component unmounts
+    return () => {
+      const element = document.getElementById(styleId)
+      if (element) {
+        element.remove()
+      }
+    }
+  }, [])
+
   const filterOptions = {
     style: ['All Styles', 'Minimalist', 'Bohemian', 'Classic', 'Avant-Garde', 'Streetwear'],
     occasion: ['All Occasions', 'Wedding', 'Casual', 'Formal', 'Business', 'Party'],
