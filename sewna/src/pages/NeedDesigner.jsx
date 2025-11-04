@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import image_one from '../assets/images/image_one.jpeg'
 import image_two from '../assets/images/image_two.jpeg'
@@ -97,6 +97,11 @@ function NeedDesigner() {
   const [selectedDesigner, setSelectedDesigner] = useState(null)
   const [uploadedFile, setUploadedFile] = useState(null)
   const [isDragging, setIsDragging] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
 
   const filterOptions = {
     style: ['All Styles', 'Minimalist', 'Bohemian', 'Classic', 'Avant-Garde', 'Streetwear'],
@@ -165,7 +170,7 @@ function NeedDesigner() {
     >
       {/* Header */}
       <header 
-        className="sticky top-0 z-50 flex justify-between items-center px-6 md:px-8 lg:px-12 py-6"
+        className="sticky top-0 z-50 flex justify-between items-center px-6 md:px-8 lg:px-12 py-2"
         style={{ backgroundColor: '#1A1A1A' }}
       >
         <Link to="/wel">
@@ -226,38 +231,44 @@ function NeedDesigner() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24">
+      <section className="relative px-6 md:px-8 lg:px-12 pt-8 md:pt-12 lg:pt-16 pb-4 md:pb-6 lg:pb-8">
         <div 
           className="absolute inset-0 pointer-events-none"
           style={{
             background: 'radial-gradient(circle at 50% 30%, rgba(0, 182, 127, 0.15) 0%, transparent 60%)'
           }}
         />
-        <div className="relative z-10 max-w-4xl">
+        <div className="relative z-10 max-w-4xl mx-auto">
           <h2 
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 leading-tight"
+            className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 leading-tight transition-all duration-3000 ease-out text-center ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
             style={{ color: '#F5F3ED', fontFamily: 'Playfair Display, serif' }}
           >
             Find the perfect designer for your style.
           </h2>
           <p 
-            className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-2xl"
+            className={`text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-2xl mx-auto transition-all duration-1000 ease-out delay-200 text-center ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
             style={{ color: '#D6C6A8' }}
           >
             Browse, filter, and connect with creators who bring your ideas to life.
           </p>
           <div 
-            className="h-px w-full mt-12"
+            className={`h-px w-full mt-12 transition-all duration-1000 ease-out delay-500 ${
+              isVisible ? 'opacity-50 scale-x-100' : 'opacity-0 scale-x-0'
+            }`}
             style={{ 
               background: 'linear-gradient(to right, transparent, #D6C6A8, transparent)',
-              opacity: 0.5
+              transformOrigin: 'center'
             }}
           />
         </div>
       </section>
 
       {/* Filter Bar */}
-      <section className="px-6 md:px-8 lg:px-12 py-8">
+      <section className="px-6 md:px-8 lg:px-12 pb-4">
         <div className="flex flex-wrap gap-4 md:gap-6 justify-center md:justify-start">
           {Object.keys(filterOptions).map((filterType) => (
             <div key={filterType} className="relative group">
@@ -304,7 +315,7 @@ function NeedDesigner() {
       </section>
 
       {/* Designer Grid */}
-      <section className="px-6 md:px-8 lg:px-12 py-12 pb-20">
+      <section className="px-6 md:px-8 lg:px-12 py-2 pb-15">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {designers.map((designer) => (
             <div
