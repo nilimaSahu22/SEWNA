@@ -20,9 +20,9 @@ function Home() {
     >
       
       {/* Header */}
-      <header className="relative z-10 flex justify-between items-center p-6 md:p-8">
+      <header className="relative z-10 flex justify-between items-start py-3 px-6 md:py-4 md:px-8">
         <h1 
-          className="text-2xl md:text-3xl"
+          className="text-xl md:text-2xl"
           style={{ 
             color: '#00B67F', 
             fontFamily: 'Pacifico, cursive', 
@@ -30,15 +30,15 @@ function Home() {
             letterSpacing: '-0.02em'
           }}
         >
-          se<span className="text-2xl md:text-3xl"
-          style={{ fontSize: '1.7rem', fontFamily: 'Poppins, sans-serif', fontStyle: 'italic', letterSpacing: '0em' }}
-          >WN</span><span className="text-2xl md:text-3xl"
-          style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 410, letterSpacing: '-0.02em', fontSize: '2.2rem' }}
+          se<span className="text-xl md:text-2xl"
+          style={{ fontSize: '1.3rem', fontFamily: 'Poppins, sans-serif', fontStyle: 'italic', letterSpacing: '0em' }}
+          >WN</span><span className="text-xl md:text-2xl"
+          style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 410, letterSpacing: '-0.02em', fontSize: '1.8rem' }}
           >a.</span>
         </h1>
         <Link 
           to="/login" 
-          className="font-sans text-base md:text-lg hover:opacity-80 transition-opacity"
+          className="font-sans text-base md:text-lg hover:opacity-80 transition-opacity pt-1 md:pt-1.5"
           style={{ color: '#D6C6A8' }}
         >
           Log In
@@ -48,7 +48,7 @@ function Home() {
       {/* Main Content - Split Layout */}
       <main className="relative z-10 flex flex-col lg:flex-row min-h-[calc(100vh-120px)]">
         {/* Left Column - Text Content */}
-        <div className="flex-1 flex flex-col justify-center px-6 md:px-10 lg:px-16 xl:px-20 py-12 lg:py-0">
+        <div className="flex-1 flex flex-col justify-start px-6 md:px-10 lg:px-16 xl:px-20 pt-0 pb-12 lg:py-0">
           {/* Headline */}
           <h2 
             className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 leading-tight text-left"
@@ -66,10 +66,10 @@ function Home() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <Link
               to="/am-designer"
-              className="px-2 py-2 font-sans text-base md:text-lg rounded-full transition-all hover:opacity-90 flex items-center justify-between gap-4"
+              className="px-4 py-1.5 font-sans text-sm md:text-base rounded-full transition-all hover:opacity-90 flex flex-col items-center justify-center gap-1"
               style={{
                 backgroundColor: '#03A776',
                 color: '#D6C6A8',
@@ -87,7 +87,7 @@ function Home() {
             </Link>
             <Link
               to="/need-designer"
-              className="px-2 py-2 font-sans text-base md:text-lg rounded-full transition-all hover:opacity-90 flex items-center justify-between gap-4"
+              className="px-4 py-1.5 font-sans text-sm md:text-base rounded-full transition-all hover:opacity-90 flex flex-col justify-center items-center gap-1"
               style={{
                 backgroundColor: '#03A776',
                 color: '#D6C6A8',
@@ -107,9 +107,9 @@ function Home() {
         </div>
 
         {/* Right Column - Scrapbook Photo Cluster */}
-        <div className="flex-1 relative lg:min-h-[calc(100vh-120px)] p-4 md:p-6 lg:p-8 xl:p-10">
+        <div className="flex-1 relative lg:h-[calc(100vh-120px)] overflow-hidden p-4 md:p-6 lg:p-8 xl:p-10">
           {/* Scrapbook Container - Positioned in right corner */}
-          <div className="relative w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
+          <div className="relative w-full h-full">
             
             {/* Photo 1 - Top left with border and rotation */}
             <div 
@@ -179,7 +179,7 @@ function Home() {
               style={{
                 width: 'clamp(65px, 9vw, 120px)',
                 height: 'clamp(85px, 12vw, 160px)',
-                top: '35%',
+                top: '30%',
                 right: 'clamp(70%, 75%, 80%)',
                 transform: 'rotate(2.5deg)',
               }}
@@ -197,7 +197,7 @@ function Home() {
               style={{
                 width: 'clamp(85px, 13vw, 160px)',
                 height: 'clamp(105px, 16vw, 200px)',
-                top: '32%',
+                top: '28%',
                 right: 'clamp(38%, 43%, 48%)',
                 transform: 'rotate(-1.5deg)',
               }}
@@ -219,7 +219,7 @@ function Home() {
               style={{
                 width: 'clamp(70px, 10vw, 135px)',
                 height: 'clamp(90px, 13vw, 175px)',
-                top: '38%',
+                top: '33%',
                 right: 'clamp(22%, 27%, 32%)',
                 transform: 'rotate(1deg)',
               }}
@@ -237,7 +237,7 @@ function Home() {
               style={{
                 width: 'clamp(75px, 11vw, 145px)',
                 height: 'clamp(95px, 14vw, 185px)',
-                top: '62%',
+                top: '52%',
                 right: 'clamp(62%, 67%, 72%)',
                 transform: 'rotate(-2deg)',
               }}
@@ -259,7 +259,7 @@ function Home() {
               style={{
                 width: 'clamp(80px, 12vw, 155px)',
                 height: 'clamp(100px, 15vw, 195px)',
-                top: '65%',
+                top: '55%',
                 right: 'clamp(42%, 47%, 52%)',
                 transform: 'rotate(1.5deg)',
               }}
@@ -277,7 +277,7 @@ function Home() {
               style={{
                 width: 'clamp(78px, 11.5vw, 148px)',
                 height: 'clamp(98px, 14.5vw, 188px)',
-                top: '60%',
+                top: '50%',
                 right: 'clamp(18%, 23%, 28%)',
                 transform: 'rotate(-1.2deg)',
               }}
