@@ -174,17 +174,22 @@ function NeedDesigner() {
         style={{ backgroundColor: '#1A1A1A' }}
       >
         <Link to="/wel">
-          <h1 
-            className="text-2xl md:text-3xl"
-            style={{ 
-              color: '#00B67F', 
-              fontFamily: 'Pacifico, cursive', 
-              fontWeight: 100,
-              letterSpacing: '-0.02em'
-            }}
-          >
-            sewna.
-          </h1>
+        <h1 
+          className="text-xl md:text-2xl"
+          style={{ 
+            color: '#00B67F', 
+            fontSize: '1.8rem',
+            fontFamily: 'Pacifico, cursive', 
+            fontWeight: 410,
+            letterSpacing: '-0.02em'
+          }}
+        >
+          se<span className="text-xl md:text-2xl"
+          style={{ fontSize: '1.3rem', fontFamily: 'Poppins, sans-serif',fontWeight: 410, fontStyle: 'italic', letterSpacing: '0em' }}
+          >WN</span><span className="text-xl md:text-2xl"
+          style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 410, letterSpacing: '-0.02em', fontSize: '1.8rem' }}
+          >a.</span>
+        </h1>
         </Link>
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           <Link 

@@ -25,13 +25,14 @@ function Home() {
           className="text-xl md:text-2xl"
           style={{ 
             color: '#00B67F', 
+            fontSize: '1.8rem',
             fontFamily: 'Pacifico, cursive', 
-            fontWeight: 100,
+            fontWeight: 410,
             letterSpacing: '-0.02em'
           }}
         >
           se<span className="text-xl md:text-2xl"
-          style={{ fontSize: '1.3rem', fontFamily: 'Poppins, sans-serif', fontStyle: 'italic', letterSpacing: '0em' }}
+          style={{ fontSize: '1.3rem', fontFamily: 'Poppins, sans-serif',fontWeight: 410, fontStyle: 'italic', letterSpacing: '0em' }}
           >WN</span><span className="text-xl md:text-2xl"
           style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 410, letterSpacing: '-0.02em', fontSize: '1.8rem' }}
           >a.</span>
